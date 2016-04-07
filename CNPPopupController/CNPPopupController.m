@@ -76,7 +76,7 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
 
 - (void)orientationWillChange {
     
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         self.maskView.frame = self.applicationWindow.bounds;
         self.popupView.center = [self endingPoint];
     }];
@@ -88,7 +88,7 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
     CGFloat angle = CNP_UIInterfaceOrientationAngleOfOrientation(statusBarOrientation);
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
     
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         self.maskView.frame = self.applicationWindow.bounds;
         self.popupView.center = [self endingPoint];
         if (CNP_SYSTEM_VERSION_LESS_THAN(@"8.0")) {
